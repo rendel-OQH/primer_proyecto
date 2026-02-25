@@ -1,0 +1,298 @@
+body {
+    background-color: #C2996B;
+    margin: 0;
+    padding: 0;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+.filtros select, .filtros input {
+    padding: 10px;
+    font-size: 16px;
+    color: black;
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid #C2996B;
+    border-radius: 25px;
+    outline: none;
+    width: 200px;
+    transition: all 0.3s ease;
+}
+
+.filtros input {
+    width: 250px;
+}
+
+.filtros select:hover, .filtros input:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.galeria-contenedor {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    width: 92%;
+	margin-left:auto;
+}
+.carrito {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: rgba(200, 200, 200, 0.8); /* Fondo del carrito */
+    border-radius: 5px;
+    max-height: 200px; /* Ajusta la altura máxima del carrito */
+    overflow-y: auto; /* Añade scroll si es necesario */
+}
+
+.detalle-producto {
+    width: 30%;
+	margin-left:-70PX;
+	display: none;
+    overflow-y: auto; /* Permitir desplazamiento si es necesario */
+	height: auto; /* Cambiado a auto para ajustarse al contenido */
+    max-height: 500px; /* Máxima altura para mantenerlo manejable */
+    padding: 20px; /* Ajuste de padding */
+	
+}
+
+.detalle-producto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Colocar detrás del contenido */
+}
+
+.item {
+    text-align: center;
+    width: calc(25% - 20px); /* Para acomodar 4 imágenes por fila */
+    margin: 10px;
+}
+
+
+.item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.item p {
+    font-size: 16px;
+    color: #555;
+}
+
+.ver-detalles {
+  color: black;
+  padding: 0.7em 1.2em; /* Añade espacio dentro del botón */
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+  cursor: pointer;
+  letter-spacing: 0.07em;
+  background: none; /* Remueve el fondo predeterminado del botón */
+  border: none; /* Sin borde inicial */
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.ver-detalles::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid transparent; /* Borde inicial invisible */
+  box-sizing: border-box; /* Asegura que el borde no afecte el tamaño del botón */
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); /* Animación suave */
+}
+
+.ver-detalles:hover::before,
+.ver-detalles:active::before {
+  border-color: #6C451C; /* Cambia el color del borde al pasar el cursor */
+  transform: scale(1.1); /* Ligeramente más grande para dar énfasis */
+}
+
+/* From Uiverse.io by Galahhad */ 
+.ui-btn {
+  --btn-default-bg: rgb(41, 41, 41);
+  --btn-padding: 15px 20px;
+  --btn-hover-bg: rgb(51, 51, 51);
+  --btn-transition: .3s;
+  --btn-letter-spacing: .1rem;
+  --btn-animation-duration: 1.2s;
+  --btn-shadow-color: rgba(0, 0, 0, 0.137);
+  --btn-shadow: 0 2px 10px 0 var(--btn-shadow-color);
+  --hover-btn-color: #FAC921;
+  --default-btn-color: #fff;
+  --font-size: 15px;
+  /* 👆 this field should not be empty */
+  --font-weight: 300;
+  --font-family: Menlo,Roboto Mono,monospace;
+  /* 👆 this field should not be empty */
+}
+.ui-btn-container {
+  display: flex;
+  justify-content: center; /* Opcional: centra los botones en su contenedor */
+  gap: 10px; /* Espaciado consistente entre los botones */
+}
+
+.ui-btn {
+	display: inline-flex; 
+  margin: 0 5px; /* Espacio horizontal entre los botones */
+  box-sizing: border-box;
+  padding: var(--btn-padding);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--default-btn-color);
+  font: var(--font-weight) var(--font-size) var(--font-family);
+  background: var(--btn-default-bg);
+  border: none;
+  cursor: pointer;
+  transition: var(--btn-transition);
+  overflow: hidden;
+  box-shadow: var(--btn-shadow);
+}
+
+.ui-btn span {
+  letter-spacing: var(--btn-letter-spacing);
+  transition: var(--btn-transition);
+  box-sizing: border-box;
+  position: relative;
+  background: inherit;
+}
+
+.ui-btn span::before {
+  box-sizing: border-box;
+  position: absolute;
+  content: "";
+  background: inherit;
+}
+
+.ui-btn:hover, .ui-btn:focus {
+  background: var(--btn-hover-bg);
+}
+
+.ui-btn:hover span, .ui-btn:focus span {
+  color: var(--hover-btn-color);
+}
+
+.ui-btn:hover span::before, .ui-btn:focus span::before {
+  animation: chitchat linear both var(--btn-animation-duration);
+}
+
+@keyframes chitchat {
+  0% {
+    content: "#";
+  }
+
+  5% {
+    content: ".";
+  }
+
+  10% {
+    content: "^{";
+  }
+
+  15% {
+    content: "-!";
+  }
+
+  20% {
+    content: "#$_";
+  }
+
+  25% {
+    content: "№:0";
+  }
+
+  30% {
+    content: "#{+.";
+  }
+
+  35% {
+    content: "@}-?";
+  }
+
+  40% {
+    content: "?{4@%";
+  }
+
+  45% {
+    content: "=.,^!";
+  }
+
+  50% {
+    content: "?2@%";
+  }
+
+  55% {
+    content: "\;1}]";
+  }
+
+  60% {
+    content: "?{%:%";
+    right: 0;
+  }
+
+  65% {
+    content: "|{f[4";
+    right: 0;
+  }
+
+  70% {
+    content: "{4%0%";
+    right: 0;
+  }
+
+  75% {
+    content: "'1_0<";
+    right: 0;
+  }
+
+  80% {
+    content: "{0%";
+    right: 0;
+  }
+
+  85% {
+    content: "]>'";
+    right: 0;
+  }
+
+  90% {
+    content: "4";
+    right: 0;
+  }
+
+  95% {
+    content: "2";
+    right: 0;
+  }
+
+  100% {
+    content: "";
+    right: 0;
+  }
+}

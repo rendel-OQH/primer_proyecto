@@ -1,0 +1,38 @@
+.mensaje2{
+	font-size:10px;
+	font-weight: bold;
+    color: #FFFFFF;
+    font-family: 'Dancing Script', cursive;
+	
+}
+.mensaje_p{
+	font-weight: bold;
+    background-color: #6C451C;
+	color: #FFFFFF;
+    font-family: 'Dancing Script', cursive;
+    padding: 30px;
+	height:*;
+	width:900px;
+    margin-top:20px;
+	text-align:left;
+	
+	border-radius: 15px
+}
+.mensaje {
+    text-align: center;
+    font-size: 19px;
+    
+}
+.eslogan {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Dancing Script', cursive;
+    margin: 40px;
+}
+.iframe{
+	border-radius: 15px;
+}

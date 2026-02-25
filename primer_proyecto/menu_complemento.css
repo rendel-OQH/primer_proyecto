@@ -1,0 +1,65 @@
+body {
+    background-color: #C2996B;
+    margin: 0;
+    padding: 0;
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+.filtros select, .filtros input {
+    padding: 10px;
+    font-size: 16px;
+    color: black; /* Cambia el color del texto a blanco */
+    background: rgba(255, 255, 255, 0.3); /* Fondo difuminado y transparente */
+    border: 2px solid #C2996B; /* Color de borde */
+    border-radius: 25px; /* Bordes redondeados */
+    outline: none;
+    width: 200px; /* Anchura predeterminada */
+    transition: all 0.3s ease; /* Transición suave para hover */
+}
+
+.filtros input {
+    width: 250px; /* Haz el buscador más ancho */
+}
+
+.filtros select:hover, .filtros input:hover {
+    background: rgba(255, 255, 255, 0.5); /* Más transparencia en hover */
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.item {
+    text-align: center;
+    width: 250px;
+    margin: 20px;
+}
+
+.item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.item h3 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.item p {
+    font-size: 16px;
+    color: #555;
+}

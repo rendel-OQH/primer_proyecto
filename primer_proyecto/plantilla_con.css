@@ -1,0 +1,98 @@
+.body {
+	margin: 0px;
+	padding: 0px;
+	margin-top: 120px;
+}
+
+.divicion_arriba {
+	position: fixed; /* Cambiado a fixed */
+	top: 0; /* Posiciona el elemento en la parte superior de la página */
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #6C451C;
+	z-index: 10; /* Asegura que esté por encima de otros elementos */
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Estilos para logo */
+.logo {
+	margin: 10px;
+	background-color: #6C451C;
+}
+
+/* Contenedor para título y menú */
+.titulo_menu {
+	display: flex;
+	flex: 1;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #6C451C;
+}
+
+/* Estilos del título */
+.titulo {
+	font-size: 34px;
+	font-weight: bold;
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	font-weight: 700;
+  text-align: center;
+  font-family: Hack, sans-serif;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  letter-spacing: 5px;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 5s linear infinite;
+  position: relative;
+}
+
+/* Estilos del logo de la imagen */
+#logo_imagen {
+	z-index: 1;
+	opacity: 1;
+	filter: drop-shadow(0px 0px 20px white);
+}
+
+/* Menú de navegación */
+.menu_navegacion {
+	display: flex;
+	gap: 20px;
+	padding: 10px;
+}
+
+.menu_navegacion a {
+	color: white;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: 'Arial', sans-serif;
+	transition: color 0.3s ease;
+}
+
+.menu_navegacion a:hover {
+	color: #d4a373;
+}
+.divicion_abajo {
+	position: relative;
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	background-color: #6C451C;
+}
+
+
+@keyframes shine {
+  0% {
+    background-position-x: -500%;
+  }
+  100% {
+    background-position-x: 500%;
+  }
+}
